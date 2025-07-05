@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+
+	<link rel="stylesheet" href="/amazing-scroll-portfolio/libs/swiper/swiper-bundle.min.css">
+
+	<script src="/amazing-scroll-portfolio/libs/swiper/swiper-bundle.min.js" defer></script>
+	<script src="/amazing-scroll-portfolio/libs/swiper/bindSwipers.js" defer></script>
+	<script src="/amazing-scroll-portfolio/js/app-2.js" defer></script>
+
+</head>
+<style>
+  * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: 1.25s cubic-bezier(.2, .6, 0, 1);
+}
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+.main-wrapper {
+	height: 100%;
+	display: flex;
+	gap: var(--index);
+background-color:black;
+	background-size: cover;
+	background-position: center;
+}
+.slider {
+	transform: rotate(12.5deg);
+	overflow: visible;
+}
+.slider:nth-child(odd) {
+	transform: rotate(192.5deg);
+}
+.slider .slider__wrapper {
+	transition: var(--transition)!important;
+	will-change: transform;
+}
+.slider__item {
+
+
+	width: 21vw;
+	margin-bottom: calc(var(--index) * 2.6);
+	cursor: pointer;
+	transition: transform var(--transition);
+	will-change: transform;
+	box-shadow: rgb(0 0 0 / .15) 0 0 30px 10px;
+}
+.slider__item:hover {
+	transform: scale(1.04);
+}
+.slider__img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	border-radius: 8px;
+}
+.slider:nth-child(odd) .slider__img {
+	transform: rotate(-180deg);
+}
+
+
+
+
+</style>
+<body>
+
+
+	<div class="main-wrapper">
+
+		<div class="swiper slider slider1">
+			<div class="swiper-wrapper slider__wrapper">
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/1.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/2.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/3.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/4.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/5.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/6.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper slider slider2">
+			<div class="swiper-wrapper slider__wrapper">
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/7.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/8.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/9.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/10.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/11.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/12.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper slider slider3">
+			<div class="swiper-wrapper slider__wrapper">
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/13.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/14.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/15.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/16.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/17.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/18.jpg);"></div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper slider slider4">
+			<div class="swiper-wrapper slider__wrapper">
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/19.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/20.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/21.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/22.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/23.jpg);"></div>
+				</div>
+				<div class="swiper-slide slider__item">
+					<div class="slider__img" style="background-image: url(amazing-scroll-portfolio/ready-html/img/24.jpg);"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

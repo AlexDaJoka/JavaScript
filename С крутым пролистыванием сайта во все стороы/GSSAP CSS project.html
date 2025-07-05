@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    	<link rel="stylesheet" href="css/main.css">
+
+	<script src="/create-draggable-site/libs/gsap.min.js" defer></script>
+	<script src="/create-draggable-site/libs/Draggable.min.js" defer></script>
+	<script src="/create-draggable-site/libs/InertiaPlugin.min.js" defer></script>
+	<script src="/create-draggable-site/ready-html/js/app-1.js" defer></script>
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+    :root{
+    --index:calc(1vw+1vh);
+    --gap:.5em;
+    --color-dark:black;
+    }
+
+body{
+overflow: hidden;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header{
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: calc(var(--index) * 2.7);
+	position: absolute;
+	font-weight: 200;
+	text-align: center;
+	margin-top: .2em;
+}
+
+.header span{
+display: block;
+	font-family: Helvetica, sans-serif;
+	font-size: calc(var(--index) * 2);
+	margin-top: 5px;
+}
+
+.gallery{
+opacity:0;
+column-width:2em;
+gap: var(--gap);
+width:30vw;
+transform:scale(8.2);
+will-change:transform;
+transition:transform 1s cubic-bezier(.075, 1, .25, 1), opacity 1s;
+}
+
+.gallery__item{
+will-change:transform;
+margin-bottom:var(--gap);
+transform:scale(1.001);
+}
+
+
+.gallery__item:hover{
+transform:scale(1.03);
+transition:.4s;
+display:block;
+}
+
+.gallery__item img{
+width:100%;
+
+}
+.loaded .gallery{
+opacity:1;
+}
+
+.loaded .header span{
+opacity:0;
+}
+
+
+</style>
+<body>
+<h1 class="header">Architecture<span>Loading...</span></h1>
+<div class="gallery">
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" height="100px" width="300px" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+        <div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+        <div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+        <div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+        <div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+        <div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+		<div class="gallery__item"><img src="https://pro-dachnikov.com/uploads/posts/2021-10/thumbs/1633737624_77-pro-dachnikov-com-p-komnata-v-stile-khai-tek-foto-81.jpg" alt="Alt"></div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <script  src="/creative-scroll-website/ready-html/libs/gsap/gsap.min.js" defer>
+</script>
+<script src="/creative-scroll-website/ready-html/libs/gsap/ScrollTrigger.min.js" defer></script>
+<script src="/creative-scroll-website/ready-html/libs/gsap/ScrollSmoother.min.js" defer ></script>
+<script src="/creative-scroll-website/js/app.js" defer></script>
+<link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<style>
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+
+:root{
+--index:calc(1vw+1vh);
+--color-header:#f4efec;
+--color-text:#cdc6c3;
+--gallery-gap:calc(var(--index)*15);
+}
+
+/* will-change */
+.content, .hero, .main-header, .gallery>* {
+will-change:transform;
+}
+
+
+body{
+background:linear-gradient(to left,#000000,#434343,#000000);
+color:white;
+overflow-x:hidden;
+
+}
+.hero{
+width:calc(var(--index)*40);
+position:absolute;
+left:37vw;
+top:8vh;
+z-index:-1;
+opacity:0.8;
+}
+
+.main-header{
+height:100vh;
+
+}
+
+.container{
+padding:0 7vw;
+}
+
+.main-title{
+font-size:calc(var(--index)*9);
+position:absolute;
+width:min-content;
+bottom:40vh;
+line-height:.9;
+}
+.gallery{
+display:flex;
+padding:calc(var(--index)*8)0;
+}
+
+.gallery > *{
+flex:1;
+display:flex;
+align-item:center;
+flex-direction:column;
+}
+
+.gallery__item{
+max-width:calc(var(--index)*35);
+margin-bottom:var(--gallery-gap);
+border-radius:20px;
+}
+
+.gallery__left {
+margin-top:(var(--gallery-gap)*2);
+}
+
+.gallery__right .gallery__item {
+margin:0;
+margin-bottom:var(--gallery-gap);
+}
+
+.text-block{
+color: var(--color-text);
+position:relative;
+}
+.text-block__h{
+font-size:2rem;
+line-height:2.4rem;
+color:var(--color-header);
+margin-bottom:1.5rem;
+}
+
+.text-block__p{
+line-height:1.4rem;
+}
+
+</style>
+
+<body>
+<div class="wrapper">
+    <div class="content">
+        <header class="hero-section">
+<img data-speed=".6" class="hero" src="https://i1.sndcdn.com/artworks-HCIFFrHDwX6Z-0-t500x500.jpg" >
+    <div class="container">
+    <div data-speed=".75"  class="main-header">
+        <h1 class="main-title">creative scroll</h1>
+
+    </div>
+</div>
+
+</header>
+
+<div class="portfolio">
+    <div class="container">
+        <main class="gallery">
+            <div data-speed=".9" class="gallery__left">
+
+               <img class="gallery__item" src="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1639984353_3-abrakadabra-fun-p-oblozhki-dlya-trekov-primeri-3.jpg" width="500px" height="500px">
+                <img class="gallery__item" src="https://cdn-us.rapfa.me/fc81d843-ebd7-4992-86aa-6da2ec5bf485_radio.jpg" width="500px" height="500px">
+
+                 <div class="text-block gallery__item">
+                    <h2 class="text-block__h">Creative floating scroll with amazing parallax effect</h2>
+                    <p class="text-block__p">Lorem ipsum dolor sit amet, consectetur adipiscing elif, sed do eiusmod tempor amount scrolling</p>
+                </div>
+<img class="gallery__item" src="https://cdn-us.rapfa.me/fc81d843-ebd7-4992-86aa-6da2ec5bf485_radio.jpg" width="500px" height="500px">
+
+            </div>
+            <div data-speed="1.1" class="gallery__right">
+
+                <div class="text-block gallery__item">
+                    <h2 class="text-block__h">Creative floating scroll with amazing parallax effect</h2>
+                    <p class="text-block__p">Lorem ipsum dolor sit amet, consectetur adipiscing elif, sed do eiusmod tempor amount scrolling</p>
+                </div>
+<img class="gallery__item" src="https://ccd.pl/covery/5089562.jpg" width="500px" height="500px">
+                <img class="gallery__item" src="https://cdn.dribbble.com/users/920717/screenshots/5875323/vinyl_record_psd_mockup_2_4x.png?compress=1&resize=800x600" width="500px" height="500px">
+                 <img class="gallery__item" src="https://www.designer-daily.com/wp-content/uploads/2016/05/Vinyl6.jpg" width="500px" height="500px">
+
+
+            </div>
+        </main>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

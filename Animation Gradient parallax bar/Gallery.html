@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/create-cool-gallery-miami/ready-html/libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/main.css">
+    <title>Miami</title>
+</head>
+<style>
+    * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--dark: #070707;
+	--index: calc(1vw + 1vh);
+	--transition: .75s cubic-bezier(.2, .6, 0, 1);
+}
+body, html {
+	width: 100%;
+	height: 100%;
+	background-color: var(--dark);
+	color: #fff;
+	font-family: raleway_m, sans-serif;
+	overflow: hidden;
+	line-height: 1.8;
+}
+.slider {
+	height: 100%;
+	transform: rotate(15deg);
+	overflow: visible;
+	top: 10vh;
+}
+.slier__wrapper {
+	transition: var(--transition)!important;
+	will-change: transform;
+}
+.slider__item {
+	max-height: 75vh;
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform var(--transition), box-shadow var(--transition);
+}
+.slider__img {
+	width: 300%;
+	height: 100%;
+	background-size: cover;
+	position: absolute;
+	left: -100%;
+	transition: var(--transition)!important;
+	will-change: transform;
+}
+.slider_bg {
+	z-index: 0;
+	transform: rotate(-20deg)!important;
+	top: -90vh;
+	left: -10vh;
+	opacity: .15;
+	filter: blur(120px) saturate(20);
+}
+.slider_bg .slider__item {
+	max-height: 100vh;
+}
+.slider__item.opened {
+	z-index: 2;
+	transform: rotate(-15deg) scale(1.45);
+	box-shadow: rgb(0 0 0 / .75) 0 0 0 10000px;
+}
+.description {
+	position: absolute;
+	font-size: calc(var(--index) * .8);
+	top: 20vh;
+	left: 8vw;
+	max-width: 24vw;
+	transition: opacity var(--transition), transform var(--transition);
+}
+.logo {
+	font-size: calc(var(--index) * 3.6);
+	font-weight: 900;
+	display: inline-block;
+	background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.description p {
+	opacity: .9;
+	transition: transform var(--transition);
+	transition-duration: 3s;
+}
+.description.hidden {
+	opacity: 0;
+	transform: translateY(5vh);
+}
+.description.hidden p {
+	transform: translateY(2vh);
+}
+
+</style>
+<body>
+<div class="description">
+		<div class="logo">Miami</div>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, deleniti nisi maxime ipsa temporibus obcaecati totam recusandae illo minus. Placeat nulla iusto illum nemo voluptas doloremque ab similique cupiditate rerum.</p>
+	</div>
+
+	<div class="swiper slider slider_main">
+		<div class="swiper-wrapper slier__wrapper">
+
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/1b282451498723.Y3JvcCwxNTU4LDEyMTksMzAsMA.png');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="30%" style="background-image: url('https://thumbs.dreamstime.com/b/нарисованный-рукой-эскиз-горо-а-майами-89209360.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://www.hilookonline.com/sites/default/files/images/products/ke-0013.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="30%" style="background-image: url('https://1.bp.blogspot.com/-xp5fldB9prY/XfkprtmuUKI/AAAAAAAAXiA/ee3LqnX61t8c3qfvZJAeIZj0JVWXXm3tACLcBGAsYHQ/s1600/2019-12-17MiamiArtDeco.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://i.pinimg.com/originals/10/3e/cb/103ecb685358366b993b9aab8e67873e.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="30%" style="background-image: url('https://gritdaily.com/wp-content/uploads/2020/01/rollingloud-1280x720.gif');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://i.pinimg.com/originals/0d/b9/60/0db9600e4fc4ab1ccbe0a5fadc831bea.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="30%" style="background-image: url('https://phonoteka.org/uploads/posts/2022-09/1663720320_61-phonoteka-org-p-oboi-na-telefon-maiami-vkontakte-71.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6075954850539.596cad906f318.jpg');"></div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="swiper slider slider_bg">
+		<div class="swiper-wrapper slier__wrapper">
+
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/1b282451498723.Y3JvcCwxNTU4LDEyMTksMzAsMA.png');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="30%" style="background-image: url('https://thumbs.dreamstime.com/b/нарисованный-рукой-эскиз-горо-а-майами-89209360.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://www.hilookonline.com/sites/default/files/images/products/ke-0013.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="30%" style="background-image: url('https://1.bp.blogspot.com/-xp5fldB9prY/XfkprtmuUKI/AAAAAAAAXiA/ee3LqnX61t8c3qfvZJAeIZj0JVWXXm3tACLcBGAsYHQ/s1600/2019-12-17MiamiArtDeco.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://i.pinimg.com/originals/10/3e/cb/103ecb685358366b993b9aab8e67873e.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="30%" style="background-image: url('https://gritdaily.com/wp-content/uploads/2020/01/rollingloud-1280x720.gif');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://i.pinimg.com/originals/0d/b9/60/0db9600e4fc4ab1ccbe0a5fadc831bea.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="30%" style="background-image: url('https://phonoteka.org/uploads/posts/2022-09/1663720320_61-phonoteka-org-p-oboi-na-telefon-maiami-vkontakte-71.jpg');"></div>
+			</div>
+			<div class="swiper-slide slider__item">
+				<div class="slider__img" data-swiper-parallax="20%" style="background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/d6075954850539.596cad906f318.jpg');"></div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script src="/create-cool-gallery-miami/ready-html/libs/swiper/swiper-bundle.min.js"></script>
+	<script src="/create-cool-gallery-miami/ready-html/js/app-1.js"></script>
+
+</body>
+</html>

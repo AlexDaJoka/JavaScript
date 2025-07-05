@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D animation</title>
+    <script src="/create-3d-scroll-site/js/app-1.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--index:calc(1vw + 1vh);
+--gutter:30px;
+--side-small:26;
+--side-big:36;
+--depth:4000px;
+--transition:.75s cubic-bezier(.075, .5, 0, 1);
+}
+
+
+@font-face {
+	font-family: raleway_c;
+	src: url(../fonts/raleway-v22-cyrillic-300.woff2);
+	font-weight: 300;
+}
+@font-face {
+	font-family: raleway_c;
+	src: url(../fonts/raleway-v22-cyrillic-100.woff2);
+	font-weight: 100;
+}
+
+body{
+background:black;
+color:white;
+font-family: raleway_c, sans-serif;
+font-size:calc(var(--index)* 6);
+line-height:1.75;
+height:var(--depth);
+font-weight:300;
+}
+.container{
+width:100%;
+height:100%;
+position:fixed;
+perspective:1500px;
+}
+.gallery{
+transform-style:preserve-3d;
+height:100%;
+}
+
+.frame{
+width:100%;
+height:100%;
+position:absolute;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:var(--transition),opacity .75s ease;
+will-change:transform;
+transform-style:preserve-3d;
+}
+h1,h2,h3,h4{
+font-weight:100;
+text-transform:uppercase;
+width: min-content;
+}
+.frame h2{
+text-align:center;
+font-size:calc(var(--index)*4);
+
+}
+.frame-media{
+position:relative;
+width:calc(var(--index)*var(--side-small));
+height:calc(var(--index)*var(--side-big));
+background-position:center;
+background-size:cover;
+}
+
+.frame-media_left{
+right:calc(var(--side-small)/2*var(--index) + var(--gutter));
+}
+
+.frame-media_right{
+left:calc(var(--side-small)/2*var(--index) + var(--gutter));
+}
+
+.frame_bg{
+background-color:rgb(0 0 0 / .87);
+
+}
+
+.text-right>*{
+position:relative;
+left:28vw;
+top:20vh;
+}
+.text-left>*{
+position:relative;
+right:30vw;
+top:15vh;
+}
+
+.frame h3{
+font-size:calc(var(--index)*2.5);
+}
+
+.frame p{
+max-width:50vw;
+margin-top:10vh;
+font-size:40px;
+}
+
+</style>
+
+<body>
+
+<div class="container">
+    <section class="gallery">
+
+        <div class="frame">
+           <div class="frame__content">
+               <h2>Азербайджан</h2>
+           </div>
+        </div>
+
+        <div class="frame">
+             <div class="frame__content">
+               <div class="frame-media frame-media_left" style="background-image:url('https://jktravels.net/wp-content/uploads/2022/08/Guba-3-1536x864.jpg');"></div>
+           </div>
+        </div>
+
+        <div class="frame"></div>
+
+         <div class="frame frame_bg">
+             <div class="frame__content">
+               <div class="frame-media frame-media_right" style="background-image:url('https://sun9-31.userapi.com/impg/XgTk-RNh1qAakzITt1I_RBxETwi1-7I0Y3WIjw/7TRJ4eFR6zQ.jpg?size=604x403&quality=96&sign=80e2f5095091bf78cdbe0ae14c0211c0&c_uniq_tag=u2CfMLYtbISQ9ShJsexLVpYbnw21lbc4S2vp_7mhGIk&type=album');"></div>
+           </div>
+        </div>
+
+ <div class="frame"></div>
+
+        <div class="frame">
+             <div class="frame__content text-right">
+               <h3>Азербайджан</h3>
+                 <p>cwkkwmfklefl
+                     kengke jnvken
+                     lnaelfaemlaelmb;e</p>
+        </div>
+</div>
+
+
+      <div class="frame frame_bg">
+             <div class="frame__content">
+               <div class="frame-media frame-media_left" style="background-image:url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/61/24/7a/caption.jpg?w=600&h=600&s=1');"></div>
+           </div>
+        </div>
+
+<div class="frame"></div>
+
+
+          <div class="frame frame_bg">
+             <div class="frame__content">
+               <div class="frame-media frame-media_right" style="background-image:url('https://vsegda-pomnim.com/uploads/posts/2022-04/thumbs/1650940424_26-vsegda-pomnim-com-p-gori-azerbaidzhana-foto-28.jpg');"></div>
+           </div>
+        </div>
+
+
+
+     <div class="frame"></div>
+
+              <div class="frame">
+             <div class="frame__content text-left">
+               <h3>Азербайджан</h3>
+                 <p>cwkkwmfkleflkengke
+                     jnvkenlnaelfa
+                     ekmlaelmb;e</p>
+        </div>
+</div>
+
+         <div class="frame frame_bg">
+             <div class="frame__content">
+               <div class="frame-media frame-media_right" style="background-image:url('https://i.photographers.ua/thumbnails/pictures/7746/800x21339jm-sharpen-resize3.jpg');"></div>
+           </div>
+        </div>
+
+         <div class="frame"></div>
+
+         <div class="frame frame_bg">
+             <div class="frame__content">
+               <div class="frame-media frame-media_right" style="background-image:url('https://sun9-36.userapi.com/impf/c630926/v630926575/49854/tLukZjV6WPw.jpg?size=640x453&quality=96&sign=cd4cc589cd9601633d23a4797a3f6aba&c_uniq_tag=TE1562UqReZDnWEJpEW4VWHV4ERB0ltmepdBFAiro-0&type=album');"></div>
+           </div>
+        </div>
+
+        <div class="frame"></div>
+
+        <div class="frame">
+             <div class="frame__content">
+               Копирайт
+                </div>
+        </div>
+
+    </section>
+</div>
+
+</body>
+</html>

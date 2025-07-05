@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Title</title>
+  <script src="js3.js" defer></script>
+</head>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+flex-direction:column;
+line-height:2em;
+}
+
+p{
+font-size:30px;
+}
+button{
+height:50px;
+width:150px;
+border:1px solid blue;
+background:blue;
+color:white;
+border-radius:20px;
+}
+
+button:hover{
+background:darkblue;
+border:1px solid darkblue;
+}
+
+h1{
+color:black;
+animation:animate 5s infinite alternate;
+}
+@keyframes animate{
+
+0%{
+color:blue;
+}
+
+25%{
+color:grey;
+}
+
+50%{
+color:orange;
+}
+
+75%{
+color:purple;
+}
+
+100%{
+color:yellow;
+}
+
+
+}
+
+</style>
+<body>
+<h1>Some random text</h1>
+<p>the hex code of the color is:<span id="2">0000</span></p>
+<button>Click</button>
+</body>
+</html>

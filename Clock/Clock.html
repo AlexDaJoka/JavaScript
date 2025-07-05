@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/app.js" defer></script>
+</head>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+background:black;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+}
+
+.wrapper{
+border:1px solid black;
+border-radius:10px;
+width:300px;
+height:20vh;
+background:linear-gradient(135deg, #14ffe9 ,#ffeb3b, #ff00e0);
+animation:animate 2s linear infinite;
+}
+
+@keyframes animate{
+100%{
+filter: hue-rotate(360deg);
+}
+
+}
+
+.display{
+display:flex;
+align-items:center;
+justify-content:center;
+height:20vh;
+font-size:50px;
+font-weight:500;
+}
+
+.wrapper .display #time{
+background:linear-gradient(90deg, #14ffe9 ,#ffeb3b, #ff00e0, #14ffe9);
+-webkit-background-clip:text;
+-webkit-text-full-color:transparent;
+letter-spacing:1px;
+font-weight:500;
+font-size:50px;
+line-height:85px;
+color:white;
+}
+
+
+
+
+</style>
+<body>
+<div class="wrapper">
+    <div class="display">
+<div id="time">16:02:00 PM</div>
+    </div>
+</div>
+</body>
+</html>
